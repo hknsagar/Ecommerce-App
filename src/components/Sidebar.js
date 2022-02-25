@@ -17,7 +17,7 @@ const Sidebar = () => {
       </div>
 
       <div className="d-grid gap-2 mt-2">
-        <Button variant="light" className="d-grid gap-2" size="sm">
+        <Button variant="light" size="sm">
           Clear Filter
         </Button>
       </div>

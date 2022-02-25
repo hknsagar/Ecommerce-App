@@ -1,6 +1,7 @@
 import { Col, Container, Row } from "react-bootstrap";
 import "./App.css";
 import Header from "./components/Header";
+import ProductList from "./components/ProductList";
 import Sidebar from "./components/Sidebar";
 
 function App() {
@@ -12,7 +13,7 @@ function App() {
           <Col sm="2" id="colSidebar">
             <Sidebar />
           </Col>
-          <Col sm="10"></Col>
+          <Col md={{ offset: 2 }}><ProductList /></Col>
         </Row>
       </Container>
     </>
