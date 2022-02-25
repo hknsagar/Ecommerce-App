@@ -1,11 +1,21 @@
-import './App.css';
-import Header from './components/Header';
+import { Col, Container, Row } from "react-bootstrap";
+import "./App.css";
+import Header from "./components/Header";
+import Sidebar from "./components/Sidebar";
 
 function App() {
   return (
-    <div className="App">
+    <>
       <Header />
-    </div>
+      <Container fluid>
+        <Row>
+          <Col sm="2" id="colSidebar">
+            <Sidebar />
+          </Col>
+          <Col sm="10"></Col>
+        </Row>
+      </Container>
+    </>
   );
 }
 

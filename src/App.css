@@ -1,0 +1,8 @@
+#colSidebar {
+  padding: 12px;
+  background: #333333;
+  height: 100%;
+  position: fixed;
+  overflow: auto;
+  color: #fff;
+}
