@@ -10,7 +10,7 @@ const Header = () => {
   } = CartState();
 
   return (
-    <Navbar bg="dark" expand="lg" variant="dark">
+    <Navbar bg="dark" expand="lg" variant="dark" id="headerMain">
       <Container>
         <Navbar.Brand>
           <Link to="/" style={{ textDecoration: "none", color: "inherit" }}>
