@@ -2,8 +2,13 @@ import React from "react";
 import { Container, Navbar, Dropdown, Nav, Badge } from "react-bootstrap";
 import { BsBagCheck, BsCartPlus } from "react-icons/bs";
 import { Link } from "react-router-dom";
+import { CartState } from "../context/CartContext";
 
 const Header = () => {
+  const {
+    state: { cart },
+  } = CartState();
+
   return (
     <Navbar bg="dark" expand="lg" variant="dark">
       <Container>
@@ -17,7 +22,8 @@ const Header = () => {
           <Nav className="ms-auto">
             <Dropdown align="end">
               <Dropdown.Toggle variant="success" id="dropdown-basic">
-                <BsCartPlus style={{ marginBottom: "4px" }} /> Cart <Badge bg="success">{0}</Badge>
+                <BsCartPlus style={{ marginBottom: "4px" }} /> Cart{" "}
+                <Badge bg="success">{cart.length}</Badge>
               </Dropdown.Toggle>
 
               <Dropdown.Menu>
