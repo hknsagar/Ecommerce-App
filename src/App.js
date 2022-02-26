@@ -13,7 +13,9 @@ function App() {
           <Col sm="2" id="colSidebar">
             <Sidebar />
           </Col>
-          <Col md={{ offset: 2 }}><ProductList /></Col>
+          <Col md={{ offset: 2 }}>
+            <ProductList />
+          </Col>
         </Row>
       </Container>
     </>
