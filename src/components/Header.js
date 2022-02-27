@@ -9,6 +9,7 @@ import { MdDelete } from "react-icons/md";
 const Header = () => {
   const {
     state: { cart },
+    dispatch,
   } = CartState();
 
   return (
@@ -22,7 +23,7 @@ const Header = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
-            <Dropdown align="end">
+            <Dropdown align="end" autoClose="outside">
               <Dropdown.Toggle variant="success" id="dropdown-basic">
                 <BsCartPlus style={{ marginBottom: "4px" }} /> Cart{" "}
                 <Badge bg="success">{cart.length}</Badge>
@@ -55,7 +56,10 @@ const Header = () => {
                               </div>
                             </Col>
                             <Col md={2} style={{ textAlign: "center" }}>
-                              <MdDelete size="25px" />
+                              <MdDelete
+                                size="25px"
+                                onClick={() => dispatch({ type: "REMOVE_FROM_CART", payload: item })}
+                              />
                             </Col>
                           </Row>
                         </Dropdown.Item>
