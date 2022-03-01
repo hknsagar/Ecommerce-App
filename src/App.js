@@ -1,23 +1,15 @@
-import { Col, Container, Row } from "react-bootstrap";
+import { Route } from "react-router-dom";
 import "./App.css";
 import Header from "./components/Header";
-import ProductList from "./components/ProductList";
-import Sidebar from "./components/Sidebar";
+import routes from "./routes";
 
 function App() {
   return (
     <>
       <Header />
-      <Container fluid>
-        <Row>
-          <Col sm="2" id="colSidebar">
-            <Sidebar />
-          </Col>
-          <Col md={{ offset: 2 }}>
-            <ProductList />
-          </Col>
-        </Row>
-      </Container>
+      {routes.map((route, idx) => (
+        <Route key={idx} exact={route.exact} path={route.path} component={route.component} />
+      ))}
     </>
   );
 }

@@ -31,11 +31,13 @@ const Header = () => {
 
               <Dropdown.Menu style={{ minWidth: "400px" }}>
                 {cart.length === 0 ? (
-                  <Dropdown.Item disabled>Empty</Dropdown.Item>
+                  <Dropdown.Item disabled style={{ display: "flex", justifyContent: "center" }}>
+                    Empty
+                  </Dropdown.Item>
                 ) : (
                   <>
                     {cart.map((item) => (
-                      <>
+                      <React.Fragment key={item.id}>
                         <Dropdown.Item>
                           <Row>
                             <Col md={2} className="pe-0">
@@ -58,17 +60,19 @@ const Header = () => {
                             <Col md={2} style={{ textAlign: "center" }}>
                               <MdDelete
                                 size="25px"
-                                onClick={() => dispatch({ type: "REMOVE_FROM_CART", payload: item })}
+                                onClick={() =>
+                                  dispatch({ type: "REMOVE_FROM_CART", payload: item })
+                                }
                               />
                             </Col>
                           </Row>
                         </Dropdown.Item>
                         <Dropdown.Divider />
-                      </>
+                      </React.Fragment>
                     ))}
-                    <div className="d-grid gap-2 mx-2">
+                    <Link to="#" className="d-grid gap-2 mx-2">
                       <Button variant="primary">Go to Cart</Button>
-                    </div>
+                    </Link>
                   </>
                 )}
               </Dropdown.Menu>

@@ -10,8 +10,6 @@ const ProductList = () => {
     dispatch,
   } = CartState();
 
-  console.log("AfterState::", cart);
-
   return (
     <Row xs={1} md={3} className="mt-3">
       {products.map((product) => (
