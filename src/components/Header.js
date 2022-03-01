@@ -70,7 +70,7 @@ const Header = () => {
                         <Dropdown.Divider />
                       </React.Fragment>
                     ))}
-                    <Link to="#" className="d-grid gap-2 mx-2">
+                    <Link to="/cart" className="d-grid gap-2 mx-2">
                       <Button variant="primary">Go to Cart</Button>
                     </Link>
                   </>

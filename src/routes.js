@@ -1,4 +1,4 @@
-// import Cart from "./views/Cart";
+import Cart from "./views/Cart";
 import Home from "./views/Home";
 
 const routes = [
@@ -7,11 +7,11 @@ const routes = [
     component: Home,
     exact: true,
   },
-  // {
-  //   path: "/cart",
-  //   component: Cart,
-  //   exact: true,
-  // },
+  {
+    path: "/cart",
+    component: Cart,
+    exact: true,
+  },
 ];
 
 export default routes;
